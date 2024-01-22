@@ -17,6 +17,6 @@ VOLUME /datadir
 
 ENV INSIDE_CONTAINER=1
 
-COPY --from=builder "/app" .
+# COPY --from=builder "/app" .
 
 ENTRYPOINT ["dotnet", "docker-compose-generator.dll"]
