@@ -2,7 +2,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0.100-bookworm-slim AS builder
 WORKDIR /source
 COPY src/docker-compose-generator.csproj docker-compose-generator.csproj
-COPY crypto-definitions.json /app/crypto-definitions.json
 # Cache some dependencies
 RUN dotnet restore
 COPY src/. .
